@@ -1,0 +1,148 @@
+Feb-09 14:26:00.132 [main] DEBUG nextflow.cli.Launcher - $> nextflow -c metontiime_9feb.conf run metontiime2_9feb.nf -profile uppmax,singularity --project naiss2023-22-866
+Feb-09 14:26:00.473 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Feb-09 14:26:00.511 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/sw/bioinfo/Nextflow/latest/rackham/nxf_home/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Feb-09 14:26:00.537 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-09 14:26:00.547 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-09 14:26:00.555 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-09 14:26:00.591 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-09 14:26:00.641 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /crex/proj/naiss2023-22-866/MetONTIIME/metontiime_9feb.conf
+Feb-09 14:26:00.641 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /crex/proj/naiss2023-22-866/MetONTIIME/metontiime_9feb.conf
+Feb-09 14:26:00.709 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `uppmax,singularity`
+Feb-09 14:26:04.185 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [singularity, uppmax, devel]
+Feb-09 14:26:04.306 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-09 14:26:04.358 [main] INFO  nextflow.cli.CmdRun - Launching `metontiime2_9feb.nf` [nasty_yalow] DSL2 - revision: b4ab54fae0
+Feb-09 14:26:04.368 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-09 14:26:04.368 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-09 14:26:04.393 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/ianm0001/.nextflow/secrets/store.json
+Feb-09 14:26:04.406 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3dce6dd8] - activable => nextflow.secret.LocalSecretsProvider@3dce6dd8
+Feb-09 14:26:04.723 [main] DEBUG nextflow.Session - Session UUID: 4d9dd163-463a-41d5-86b8-cad73e88b1c8
+Feb-09 14:26:04.723 [main] DEBUG nextflow.Session - Run name: nasty_yalow
+Feb-09 14:26:04.724 [main] DEBUG nextflow.Session - Executor pool size: 2
+Feb-09 14:26:04.732 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-09 14:26:04.737 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-09 14:26:04.809 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (23:01 CEST)
+  System: Linux 3.10.0-1160.108.1.el7.x86_64
+  Runtime: Groovy 3.0.19 on Java HotSpot(TM) 64-Bit Server VM 11.0.9+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 32214@r53.uppmax.uu.se [172.18.9.53]
+  CPUs: 1 - Mem: 125.4 GB (100.8 GB) - Swap: 8 GB (8 GB)
+Feb-09 14:26:04.884 [main] DEBUG nextflow.Session - Work-dir: /crex/proj/naiss2023-22-866/MetONTIIME/work [lustre]
+Feb-09 14:26:04.885 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /crex/proj/naiss2023-22-866/MetONTIIME/bin
+Feb-09 14:26:04.896 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-09 14:26:04.922 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-09 14:26:04.982 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-09 14:26:05.007 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Feb-09 14:26:05.180 [main] DEBUG nextflow.Session - Session start
+Feb-09 14:26:06.065 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-09 14:26:06.272 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:importDb` matches process importDb
+Feb-09 14:26:06.284 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.284 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.295 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Feb-09 14:26:06.314 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Feb-09 14:26:06.319 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Feb-09 14:26:06.351 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Feb-09 14:26:06.571 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:importFastq` matches process importFastq
+Feb-09 14:26:06.575 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.575 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.580 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:derepSeq` matches process derepSeq
+Feb-09 14:26:06.582 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.582 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.585 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:assignTaxonomy` matches process assignTaxonomy
+Feb-09 14:26:06.586 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.598 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.602 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:filterTaxa` matches process filterTaxa
+Feb-09 14:26:06.602 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.602 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.607 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:taxonomyVisualization` matches process taxonomyVisualization
+Feb-09 14:26:06.609 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.610 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.623 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:collapseTables` matches process collapseTables
+Feb-09 14:26:06.625 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.625 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.652 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:dataQC` matches process dataQC
+Feb-09 14:26:06.654 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.655 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.666 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:diversityAnalyses` matches process diversityAnalyses
+Feb-09 14:26:06.668 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Feb-09 14:26:06.671 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Feb-09 14:26:06.675 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: importDb, taxonomyVisualization, filterTaxa, derepSeq, importFastq, assignTaxonomy, diversityAnalyses, dataQC, collapseTables
+Feb-09 14:26:06.697 [main] WARN  nextflow.Session - There's no process matching config selector: concatenateFastq
+Feb-09 14:26:06.734 [main] WARN  nextflow.Session - There's no process matching config selector: filterFastq -- Did you mean: filterTaxa?
+Feb-09 14:26:06.734 [main] WARN  nextflow.Session - There's no process matching config selector: downsampleFastq
+Feb-09 14:26:06.734 [main] DEBUG nextflow.Session - Igniting dataflow network (11)
+Feb-09 14:26:06.759 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > importDb
+Feb-09 14:26:06.760 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > importFastq
+Feb-09 14:26:06.761 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > derepSeq
+Feb-09 14:26:06.768 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > assignTaxonomy
+Feb-09 14:26:06.769 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > filterTaxa
+Feb-09 14:26:06.783 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > taxonomyVisualization
+Feb-09 14:26:06.783 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > collapseTables
+Feb-09 14:26:06.783 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > dataQC
+Feb-09 14:26:06.797 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > diversityAnalyses
+Feb-09 14:26:06.797 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_fe6db30c35f84a8a: /crex/proj/naiss2023-22-866/MetONTIIME/metontiime2_9feb.nf
+Feb-09 14:26:06.797 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-09 14:26:06.797 [main] DEBUG nextflow.Session - Session await
+Feb-09 14:26:06.876 [Actor Thread 4] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `sampleMetadata` -- Initialise it to a default value eg. `params.sampleMetadata = some_value`
+Feb-09 14:26:06.927 [Actor Thread 9] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://maestsi/metontiime:latest; path=/crex/proj/naiss2023-22-866/MetONTIIME/work/singularity/maestsi-metontiime-latest.img
+Feb-09 14:26:07.293 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process importFastq > jobId: 44982770; workDir: /crex/proj/naiss2023-22-866/MetONTIIME/work/92/0f3398a3a48d4b505524e5ddcdd4d4
+Feb-09 14:26:07.294 [Task submitter] INFO  nextflow.Session - [92/0f3398] Submitted process > importFastq
+Feb-09 14:26:07.366 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process importDb (1) > jobId: 44982771; workDir: /crex/proj/naiss2023-22-866/MetONTIIME/work/0d/27bbcb42584c49dd70df2fcd224acc
+Feb-09 14:26:07.366 [Task submitter] INFO  nextflow.Session - [0d/27bbcb] Submitted process > importDb (1)
+Feb-09 14:31:11.397 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[jobId: 44982770; id: 2; name: importFastq; status: SUBMITTED; exit: -; error: -; workDir: /crex/proj/naiss2023-22-866/MetONTIIME/work/92/0f3398a3a48d4b505524e5ddcdd4d4 started: -; exited: -; ]
+~> TaskHandler[jobId: 44982771; id: 1; name: importDb (1); status: SUBMITTED; exit: -; error: -; workDir: /crex/proj/naiss2023-22-866/MetONTIIME/work/0d/27bbcb42584c49dd70df2fcd224acc started: -; exited: -; ]
+Feb-09 14:31:41.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 44982771; id: 1; name: importDb (1); status: COMPLETED; exit: 140; error: -; workDir: /crex/proj/naiss2023-22-866/MetONTIIME/work/0d/27bbcb42584c49dd70df2fcd224acc started: 1707485476442; exited: 2024-02-09T13:31:37Z; ]
+Feb-09 14:31:41.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=importDb (1); work-dir=/crex/proj/naiss2023-22-866/MetONTIIME/work/0d/27bbcb42584c49dd70df2fcd224acc
+  error [nextflow.exception.ProcessFailedException]: Process `importDb (1)` terminated with an error exit status (140)
+Feb-09 14:31:41.508 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'importDb (1)'
+
+Caused by:
+  Process `importDb (1)` terminated with an error exit status (140)
+
+Command executed:
+
+  mkdir -p /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb
+  
+  qiime tools import 		--type 'FeatureData[Sequence]' 		--input-path sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_sequences.qza
+  
+  qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_taxonomy.qza
+
+Command exit status:
+  140
+
+Command output:
+  (empty)
+
+Command error:
+  INFO:    Environment variable SINGULARITYENV_TMPDIR is set, but APPTAINERENV_TMPDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_NXF_TASK_WORKDIR is set, but APPTAINERENV_NXF_TASK_WORKDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_SNIC_TMP is set, but APPTAINERENV_SNIC_TMP is preferred
+  Matplotlib created a temporary config/cache directory at /scratch/44982771/matplotlib-ckyyixja because the default path (/home/ianm0001/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Work dir:
+  /crex/proj/naiss2023-22-866/MetONTIIME/work/0d/27bbcb42584c49dd70df2fcd224acc
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Feb-09 14:31:41.540 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `importDb (1)` terminated with an error exit status (140)
+Feb-09 14:31:41.626 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] derepSeq
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: flag_import
+  port 1: (cntrl) -     ; channel: $
+
+[process] dataQC
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: flag_import
+  port 1: (cntrl) -     ; channel: $
+
+Feb-09 14:31:41.643 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-09 14:31:41.643 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-09 14:31:41.649 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Feb-09 14:31:41.668 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Feb-09 14:31:41.771 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=2m 30s; cachedDuration=0ms;loadCpus=-6; loadMemory=0; peakRunning=1; peakCpus=6; peakMemory=10 GB; ]
+Feb-09 14:31:41.782 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-09 14:31:41.883 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
