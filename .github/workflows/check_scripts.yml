@@ -20,4 +20,6 @@ jobs:
 
       - uses: nf-core/setup-nextflow@v1
 
+      - run: sudo apt-get install qiime --yes
+
       - run: ./reproduce_error.sh
