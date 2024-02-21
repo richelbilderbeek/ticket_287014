@@ -13,8 +13,12 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Original
 # nextflow -c metontiime_9feb.conf run metontiime2_9feb.nf
 
+cp metontiime_9feb.conf my.conf
+
+sed -i "s,/crex/proj/naiss2023-22-866/,${PWD}/,g" my.conf
+
 # Suitable for local
-nextflow -c metontiime_9feb_local.conf run metontiime2_9feb.nf
+nextflow -c my.conf run metontiime2_9feb.nf
 
 #  --workDir trimmed_and_filtered_Q15_qz \
 #  --dbSequencesFasta sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta \
