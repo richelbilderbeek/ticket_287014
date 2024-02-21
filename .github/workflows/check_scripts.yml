@@ -1,0 +1,21 @@
+# Checks if the scripts actually work
+
+name: check_scripts
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # From https://github.com/actions/setup-java?tab=readme-ov-file#eclipse-temurin
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - run: ./reproduce_error.sh
