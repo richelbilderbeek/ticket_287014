@@ -20,6 +20,8 @@ jobs:
 
       - uses: nf-core/setup-nextflow@v1
 
-      - run: sudo apt-get install qiime --yes
+      - uses: eWaterCycle/setup-singularity@v7
+        with:
+          singularity-version: 3.8.3
 
       - run: ./reproduce_error.sh
