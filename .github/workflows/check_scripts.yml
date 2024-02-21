@@ -18,4 +18,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - uses: nf-core/setup-nextflow@v1
+
       - run: ./reproduce_error.sh
