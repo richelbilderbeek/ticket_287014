@@ -10,6 +10,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Free Disk Space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: true
+          # all of these default to true, but feel free to set to
+          # false if necessary for your workflow
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          swap-storage: true
+
       - uses: actions/checkout@v2
 
       # From https://github.com/actions/setup-java?tab=readme-ov-file#eclipse-temurin
