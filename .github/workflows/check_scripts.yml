@@ -31,6 +31,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - uses: actions/setup-go@v5
+          with:
+            go-version: '^1.13.1' # The Go version to download (if necessary) and use.
+      - run: go version
+
       - uses: nf-core/setup-nextflow@v1
 
       - uses: eWaterCycle/setup-singularity@v7
