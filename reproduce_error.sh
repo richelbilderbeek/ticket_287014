@@ -1,7 +1,11 @@
 #!/bin/bash
 
 
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# On GitHub Actiobs
+export JAVA_HOME=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.10-7/x64
+
+# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 
 # Don's use older version than CI script
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64

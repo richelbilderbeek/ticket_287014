@@ -30,6 +30,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - run: which java
 
       - uses: actions/setup-go@v5
         with:
