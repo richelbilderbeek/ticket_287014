@@ -4,6 +4,8 @@ Ticket 287014.
 
 ## Problem
 
+The version of Python is changed, not by me, to something that is too old.
+
 In a script [run_rackham.sh](run_rackham.sh),
 I load some modules, activate an environment and load Python 3.12.1.
 Note the Python version.
