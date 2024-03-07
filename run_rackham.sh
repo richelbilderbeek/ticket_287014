@@ -3,7 +3,7 @@
 #SBATCH -A staff
 #SBATCH -t 9:59:00
 #SBATCH -p core
-#SBATCH -n 1
+#SBATCH -n 4
 
 module load bioinfo-tools Nextflow 
 
