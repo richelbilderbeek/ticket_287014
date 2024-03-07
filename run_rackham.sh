@@ -3,8 +3,8 @@ module load bioinfo-tools Nextflow
 
 module load qiime2/2018.11.0
 source activate qiime2-2018.11
-module load python3/python3/3.12.1
-python --version
+module load python3/3.12.1
+python3 --version
 
 # Download a fresh Nextflow file
 rm -f metontiime2.nf
