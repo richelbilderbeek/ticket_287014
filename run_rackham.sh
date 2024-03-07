@@ -1,5 +1,9 @@
 #!/bin/bash
-module load bioinfo-tools python3/3.12.1 Nextflow 
+module load bioinfo-tools Nextflow 
+
+module load qiime2/2018.11.0
+source activate qiime2-2018.11
+
 python --version
 
 # Download a fresh Nextflow file
