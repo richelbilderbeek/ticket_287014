@@ -62,4 +62,5 @@ nextflow -c "${config_filename}" run metontiime2.nf \
   --dbSequencesFasta="${db_sequence_fasta_filename}" \
   --sampleMetadata="${sample_metadata_tsv_filename}" \
   --dbTaxonomyTsv="${taxonomy_tsv_filename}" \
-  -profile singularity,uppmax
+  -profile uppmax,singularity
+
