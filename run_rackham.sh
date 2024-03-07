@@ -1,4 +1,10 @@
 #!/bin/bash
+#SBATCH -J ticket_287014
+#SBATCH -A staff
+#SBATCH -t 9:59:00
+#SBATCH -p core
+#SBATCH -n 1
+
 module load bioinfo-tools Nextflow 
 
 # DO NOT load a QIIME module: use QIIME in the Singularity container instead
