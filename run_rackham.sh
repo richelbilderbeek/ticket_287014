@@ -1,5 +1,5 @@
 #!/bin/bash
-module load bioinfo-tools python/3.12.1 python3/3.12.1 Nextflow 
+module load bioinfo-tools python3/3.12.1 Nextflow 
 python --version
 
 # Download a fresh Nextflow file
