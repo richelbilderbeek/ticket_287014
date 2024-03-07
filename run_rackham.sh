@@ -1,5 +1,6 @@
 #!/bin/bash
 module load bioinfo-tools python/3.12.1 Nextflow 
+python --version
 
 # Download a fresh Nextflow file
 rm -f metontiime2.nf
