@@ -1,5 +1,5 @@
 #!/bin/bash
-module load nextflow
+module load Nextflow
 
 # Download a fresh config file
 rm -f metontiime2.conf
