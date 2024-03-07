@@ -1,5 +1,5 @@
 #!/bin/bash
-module load Nextflow
+module load bioinfo-tools Nextflow
 
 # Download a fresh config file
 rm -f metontiime2.conf
