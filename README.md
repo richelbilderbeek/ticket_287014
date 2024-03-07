@@ -34,6 +34,8 @@ for the full error message.
 
 ### How to reproduce
 
+On an interactive node, do:
+
 ```
 cd /crex/proj/staff/richel/ticket_287014
 ./run_rackham.sh
