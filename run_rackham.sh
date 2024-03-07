@@ -1,19 +1,20 @@
 #!/bin/bash
 module load bioinfo-tools Nextflow 
 
-# Nope, use Singularity
-#module load qiime2/2018.11.0
-#source activate qiime2-2018.11
+# DO NOT load a QIIME module: use QIIME in the Singularity container instead
+# module load qiime2/2018.11.0
+# source activate qiime2-2018.11
 
-#module load python/3.12.1
-echo "python version: "
-python --version
-echo "python location: "
-which python
-echo "python3 version: "
-python3 --version
-echo "python3 location: "
-which python3
+# DO NOT load a Python module: use Python within the Singularity containers instead
+# module load python/3.12.1
+# echo "python version: "
+# python --version
+# echo "python location: "
+# which python
+# echo "python3 version: "
+# python3 --version
+# echo "python3 location: "
+# which python3
 
 # Download a fresh Nextflow file
 rm -f metontiime2.nf
