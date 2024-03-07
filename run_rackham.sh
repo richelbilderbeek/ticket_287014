@@ -1,6 +1,10 @@
 #!/bin/bash
 module load bioinfo-tools Nextflow
 
+# Download a fresh Nextflow file
+rm -f metontiime2.nf
+wget https://raw.githubusercontent.com/richelbilderbeek/MetONTIIME/master/metontiime2.nf
+
 # Download a fresh config file
 rm -f metontiime2.conf
 wget https://raw.githubusercontent.com/MaestSi/MetONTIIME/master/metontiime2.conf
@@ -43,8 +47,10 @@ echo "sample_metadata_tsv_filename: ${sample_metadata_tsv_filename}"
 taxonomy_tsv_filename="/crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv"
 echo "taxonomy_tsv_filename: ${taxonomy_tsv_filename}"
 
+config_filename="${PWD}/metontiime2.conf"
+
 # Run locally
-nextflow -c metontiime2.conf run metontiime2.nf \
+nextflow -c "${config_filename}" run metontiime2.nf \
   --workDir="${work_dir}" \
   --resultsDir="${results_dir}" \
   --dbSequencesFasta="${db_sequence_fasta_filename}" \
