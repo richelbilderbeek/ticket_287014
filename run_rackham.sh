@@ -28,7 +28,7 @@ sed -i 's/ 10.GB / 7.GB /' metontiime2.conf
 sed -i "s/executor = 'pbspro'/executor = 'local'/" metontiime2.conf
 
 # work_dir="${PWD}/work_local_singularity"
-work_dir="/crex/proj/staff/richel/ticket_287014/work_local_singularity"
+work_dir="/crex/proj/staff/richel/ticket_287014_output/work_local_singularity"
 echo "work_dir: ${work_dir}"
 
 # Get the sequences in the correct folder 
@@ -37,7 +37,7 @@ mkdir "${work_dir}"
 cp /crex/proj/naiss2023-22-866/MetONTIIME/trimmed_and_filtered_Q15_qz/seqkitQ15cutadaptlib1sup_bc01.fastq.gz "${work_dir}"
 
 # results_dir="${PWD}/results_local_singularity"
-results_dir="/crex/proj/staff/richel/ticket_287014/results_local_singularity"
+results_dir="/crex/proj/staff/richel/ticket_287014_output/results_local_singularity"
 echo "results_dir: ${results_dir}"
 
 # db_sequence_fasta_filename="${PWD}/example_db_sequence.fasta"
