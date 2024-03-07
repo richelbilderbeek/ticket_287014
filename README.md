@@ -41,6 +41,10 @@ cd /crex/proj/staff/richel/ticket_287014
 ./run_rackham.sh
 ```
 
+### Solution 
+
+Don't load the Python module
+
 ### Full error message
 
 Cleaning before:
@@ -285,3 +289,33 @@ Tip: you can replicate the issue by changing to the process work dir and enterin
  -- Check '.nextflow.log' file for details
 ```
 
+
+
+## Other notes
+
+The [nextflow_7march.log](nextflow_7march.log) gives this error:
+
+```
+  qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_taxonomy.qza
+```
+
+This points towards `/crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv` being invalid.
+
+Run, on an interactive node:
+
+```
+module load uppmax bioinfo-tools Nextflow 
+module load qiime2/2018.11.0
+source activate qiime2-2018.11
+
+# Note the tabs in this Nextflow line!
+# qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path /crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/staff/richel/dump.qza
+qiime tools import --type 'FeatureData[Taxonomy]' --input-path /crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv --input-format HeaderlessTSVTaxonomyFormat --output-path /crex/proj/staff/richel/dump.qza
+```
+
+Hmmm, this works:
+
+```
+(qiime2-2018.11) [richel@s141 ~]$ qiime tools import --type 'FeatureData[Taxonomy]' --input-path /crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv --input-format HeaderlessTSVTaxonomyFormat --output-path /crex/proj/staff/richel/dump.qza
+Imported /crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv as HeaderlessTSVTaxonomyFormat to /crex/proj/staff/richel/dump.qza
+```

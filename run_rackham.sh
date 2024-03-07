@@ -3,8 +3,7 @@ module load bioinfo-tools Nextflow
 
 module load qiime2/2018.11.0
 source activate qiime2-2018.11
-module load python/3.12.1
-#module load python3/3.12.1
+#module load python/3.12.1
 echo "python version: "
 python --version
 echo "python3 version: "
