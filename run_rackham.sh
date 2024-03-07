@@ -8,8 +8,12 @@ module load bioinfo-tools Nextflow
 #module load python/3.12.1
 echo "python version: "
 python --version
+echo "python location: "
+which python
 echo "python3 version: "
 python3 --version
+echo "python3 location: "
+which python3
 
 # Download a fresh Nextflow file
 rm -f metontiime2.nf

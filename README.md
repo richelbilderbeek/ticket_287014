@@ -50,7 +50,10 @@ that tries to mount a folder.
 
 
 Does QIIME need to be loaded when doing all the others?
+You can easily remove the QIIME import, it is in the containers.
+Tested and is correct!
 
+`which python`? Added!
 
 ### Full error message
 
