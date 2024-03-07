@@ -43,7 +43,14 @@ cd /crex/proj/staff/richel/ticket_287014
 
 ### Solution 
 
-Don't load the Python module
+Don't load the Python module. 
+After this, it still shows Python 3.8.
+This may be caused by the Singularity image
+that tries to mount a folder.
+
+
+Does QIIME need to be loaded when doing all the others?
+
 
 ### Full error message
 

@@ -1,8 +1,10 @@
 #!/bin/bash
 module load bioinfo-tools Nextflow 
 
-module load qiime2/2018.11.0
-source activate qiime2-2018.11
+# Nope, use Singularity
+#module load qiime2/2018.11.0
+#source activate qiime2-2018.11
+
 #module load python/3.12.1
 echo "python version: "
 python --version
