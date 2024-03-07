@@ -43,6 +43,18 @@ cd /crex/proj/staff/richel/ticket_287014
 
 ### Solution 
 
+For us:
+
+- No loading of Python module
+- No loading of QIIME module
+- Remove the `.local` folder
+
+How a developer could have prevented this:
+
+- Supply a Singularity container that never looks outside of itself
+
+### Notes to arrive at solution
+
 Don't load the Python module. 
 After this, it still shows Python 3.8.
 This may be caused by the Singularity image
@@ -54,6 +66,58 @@ You can easily remove the QIIME import, it is in the containers.
 Tested and is correct!
 
 `which python`? Added!
+
+Seems that within container, stuff from the home folder is used
+and it is assumed that numpi is installed.
+
+Numpi *is* found when running the container directly:
+
+```
+[richel@s141 singularity]$ singularity shell maestsi-metontiime-latest.img
+Apptainer> which python
+/opt/conda/envs/MetONTIIME_env/bin/python
+Apptainer> which python3
+/opt/conda/envs/MetONTIIME_env/bin/python3
+Apptainer> python
+Python 3.8.15 | packaged by conda-forge | (default, Nov 22 2022, 08:46:39) 
+[GCC 10.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+```
+
+Theory is that the local environment is causing the trouble.
+Delete it! Yes, Doug made me do this :-)
+
+```
+rm -rf /home/richel/.local/
+```
+
+Then:
+
+```
+[richel@s141 singularity]$ singularity shell maestsi-metontiime-latest.img
+Apptainer> python
+Python 3.8.15 | packaged by conda-forge | (default, Nov 22 2022, 08:46:39) 
+[GCC 10.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+>>> import pandas
+>>> pandas.__file__
+'/opt/conda/envs/MetONTIIME_env/lib/python3.8/site-packages/pandas/__init__.py'
+```
+
+Best practices:
+
+- Never have a `.local` folder
+- Regularly delete `.cache` and `.local`
+
+How this would have been prevented:
+
+- Tool developers:
+  - --> the container should not look outside itself
+  - never use `python scriptname.py` instead use `#!/bin/env python`
+- Always use a venv
+- Consider using a base venv/conda environment
 
 ### Full error message
 
