@@ -55,10 +55,11 @@ echo "taxonomy_tsv_filename: ${taxonomy_tsv_filename}"
 config_filename="${PWD}/metontiime2.conf"
 
 # Run locally
+# Use UPPMAX profile
 nextflow -c "${config_filename}" run metontiime2.nf \
   --workDir="${work_dir}" \
   --resultsDir="${results_dir}" \
   --dbSequencesFasta="${db_sequence_fasta_filename}" \
   --sampleMetadata="${sample_metadata_tsv_filename}" \
   --dbTaxonomyTsv="${taxonomy_tsv_filename}" \
-  -profile singularity
+  -profile singularity,uppmax
