@@ -1,0 +1,363 @@
+
+Note that NXF_HOME is set to $HOME/.nextflow
+Please change NXF_HOME to a place in your project directory (export NXF_HOME=yourprojectfolder)
+
+Please use   export NXF_VER=nextflow_version    to select different version
+https://www.nextflow.io/docs/latest/config.html#environment-variables
+
+--2024-03-08 11:39:31--  https://raw.githubusercontent.com/richelbilderbeek/MetONTIIME/master/metontiime2.nf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 27447 (27K) [text/plain]
+Saving to: ‘metontiime2.nf’
+
+     0K .......... .......... ......                          100% 6,48M=0,004s
+
+2024-03-08 11:39:31 (6,48 MB/s) - ‘metontiime2.nf’ saved [27447/27447]
+
+--2024-03-08 11:39:31--  https://raw.githubusercontent.com/MaestSi/MetONTIIME/master/metontiime2.conf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10114 (9,9K) [text/plain]
+Saving to: ‘metontiime2.conf’
+
+     0K .........                                             100% 3,48M=0,003s
+
+2024-03-08 11:39:31 (3,48 MB/s) - ‘metontiime2.conf’ saved [10114/10114]
+
+work_dir: /crex/proj/staff/richel/ticket_287014_output/work_local_singularity
+mkdir: cannot create directory ‘/crex/proj/staff/richel/ticket_287014_output/work_local_singularity’: File exists
+results_dir: /crex/proj/staff/richel/ticket_287014_output/results_local_singularity
+db_sequence_fasta_filename: /crex/proj/naiss2023-22-866/MetONTIIME/sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta
+sample_metadata_tsv_filename: /crex/proj/staff/richel/ticket_287014_output/work_local_singularity/created_sample_metadata.tsv
+taxonomy_tsv_filename: /crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv
+N E X T F L O W  ~  version 23.10.1
+Launching `metontiime2.nf` [mighty_caravaggio] DSL2 - revision: ce81e587ac
+[-        ] process > importDb              -
+[-        ] process > concatenateFastq      -
+[-        ] process > filterFastq           -
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (1)
+[f2/030404] process > importDb (1)          [  0%] 0 of 1
+[-        ] process > concatenateFastq      [  0%] 0 of 1
+[-        ] process > filterFastq           -
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (1)
+[f2/030404] process > importDb (1)          [  0%] 0 of 1
+[-        ] process > concatenateFastq      [  0%] 0 of 1
+[-        ] process > filterFastq           -
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (2)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [  0%] 0 of 1
+[-        ] process > filterFastq           -
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (2)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [  0%] 0 of 1
+[-        ] process > filterFastq           -
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (3)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [  0%] 0 of 1
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (3)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [  0%] 0 of 1
+[-        ] process > downsampleFastq       -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (4)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [  0%] 0 of 1
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (4)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (5)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [  0%] 0 of 1
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+executor >  local (6)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[-        ] process > derepSeq              [  0%] 0 of 1
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [  0%] 0 of 1
+[-        ] process > diversityAnalyses     -
+
+executor >  local (7)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [  0%] 0 of 1
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (7)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [  0%] 0 of 1
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (8)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [  0%] 0 of 1
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (8)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [  0%] 0 of 1
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (8)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [100%] 1 of 1 ✔
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (9)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [100%] 1 of 1 ✔
+[-        ] process > filterTaxa            [  0%] 0 of 1
+[-        ] process > taxonomyVisualization -
+[24/6826bf] process > collapseTables (1)    [  0%] 0 of 1
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (10)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)        [  0%] 0 of 1
+[-        ] process > taxonomyVisualization -
+[24/6826bf] process > collapseTables (1)    [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (10)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)        [  0%] 0 of 1
+[-        ] process > taxonomyVisualization -
+[24/6826bf] process > collapseTables (1)    [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (10)
+[f2/030404] process > importDb (1)          [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq      [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq           [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq       [100%] 1 of 1 ✔
+[2b/927420] process > importFastq           [100%] 1 of 1 ✔
+[88/798460] process > derepSeq              [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)    [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)        [100%] 1 of 1 ✔
+[-        ] process > taxonomyVisualization -
+[24/6826bf] process > collapseTables (1)    [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses     -
+
+executor >  local (11)
+[f2/030404] process > importDb (1)              [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq          [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq               [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq           [100%] 1 of 1 ✔
+[2b/927420] process > importFastq               [100%] 1 of 1 ✔
+[88/798460] process > derepSeq                  [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)        [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)            [100%] 1 of 1 ✔
+[9f/5c5ff2] process > taxonomyVisualization (1) [  0%] 0 of 1
+[24/6826bf] process > collapseTables (1)        [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                    [100%] 1 of 1 ✔
+[-        ] process > diversityAnalyses         [  0%] 0 of 1
+
+executor >  local (12)
+[f2/030404] process > importDb (1)              [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq          [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq               [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq           [100%] 1 of 1 ✔
+[2b/927420] process > importFastq               [100%] 1 of 1 ✔
+[88/798460] process > derepSeq                  [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)        [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)            [100%] 1 of 1 ✔
+[9f/5c5ff2] process > taxonomyVisualization (1) [100%] 1 of 1 ✔
+[24/6826bf] process > collapseTables (1)        [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                    [100%] 1 of 1 ✔
+[2c/64e5aa] process > diversityAnalyses (1)     [  0%] 0 of 1
+
+executor >  local (12)
+[f2/030404] process > importDb (1)              [100%] 1 of 1 ✔
+[7b/f3528a] process > concatenateFastq          [100%] 1 of 1 ✔
+[b4/a5c567] process > filterFastq               [100%] 1 of 1 ✔
+[9b/8ee618] process > downsampleFastq           [100%] 1 of 1 ✔
+[2b/927420] process > importFastq               [100%] 1 of 1 ✔
+[88/798460] process > derepSeq                  [100%] 1 of 1 ✔
+[96/cb1311] process > assignTaxonomy (1)        [100%] 1 of 1 ✔
+[6e/49310f] process > filterTaxa (1)            [100%] 1 of 1 ✔
+[9f/5c5ff2] process > taxonomyVisualization (1) [100%] 1 of 1 ✔
+[24/6826bf] process > collapseTables (1)        [100%] 1 of 1 ✔
+[eb/37c535] process > dataQC                    [100%] 1 of 1 ✔
+[2c/64e5aa] process > diversityAnalyses (1)     [100%] 1 of 1 ✔
+Completed at: 08-Mar-2024 12:41:50
+Duration    : 1h 2m 10s
+CPU hours   : 4.1
+Succeeded   : 12
+
+
