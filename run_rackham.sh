@@ -1,6 +1,8 @@
 #!/bin/bash
 #SBATCH -J ticket_287014
-#SBATCH -A staff
+#SBATCH -A uppmax2023-2-25
+# don't use 'staff' here
+#SBATCH -M snowy
 #SBATCH -t 9-00:00:00
 #SBATCH -p core
 #SBATCH -n 4
