@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J ticket_287014
 #SBATCH -A staff
-#SBATCH -t 9-23:59:00
+#SBATCH -t 9-00:00:00
 #SBATCH -p core
 #SBATCH -n 4
 
