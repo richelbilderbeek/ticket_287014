@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH -J metontiime_8mar
 #SBATCH -A naiss2023-22-866
-#SBATCH -M snowy
 #SBATCH -t 9-00:00:00
 #SBATCH -p core
 #SBATCH -n 4
