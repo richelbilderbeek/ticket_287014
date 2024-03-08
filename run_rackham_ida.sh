@@ -44,6 +44,10 @@ sed -i 's/ 10.GB / 7.GB /' metontiime2.conf
 # Change the executor from pbspro to local
 sed -i "s/executor = 'pbspro'/executor = 'local'/" metontiime2.conf
 
+echo "Script generated and used:"
+cat metontiime2.conf
+
+echo " "
 # work_dir="${PWD}/work_local_singularity"
 # work_dir="/crex/proj/staff/richel/ticket_287014_output/work_local_singularity"
 workDir="/crex/proj/naiss2023-22-866/MetONTIIME/trimmed_and_filtered_Q15_qz"

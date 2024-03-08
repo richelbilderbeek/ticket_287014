@@ -2,6 +2,31 @@
 
 Ticket 287014.
 
+## Solution
+
+### How to use
+
+On Rackham, do:
+
+```
+wget https://raw.githubusercontent.com/richelbilderbeek/ticket_287014/master/run_rackham_ida.sh
+sbatch run_rackham_ida.sh
+```
+
+### What does it do?
+
+It modifies [the original 'metontiime2.conf' file](https://raw.githubusercontent.com/MaestSi/MetONTIIME/master/metontiime2.conf)
+to suit the needs of the user, in a way that is tested to work.
+
+Changes it makes:
+
+- Change the number of processors from 6 to 4
+- Change the memory use from 10 to 7 GB
+- Change the executor from pbspro to local
+
+
+## Appendix
+
 ## Problem
 
 The version of Python is changed, not by me, to something that is too old.
