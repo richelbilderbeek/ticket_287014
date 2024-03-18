@@ -4,11 +4,10 @@
 #SBATCH -t 9-00:00:00
 #SBATCH -p core
 #SBATCH -n 4
-#SBATCH --qos=short
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=ida.nordstrom@slu.se
-#SBATCH --error=metontiime_8mar.err
-#SBATCH --output=metontiime_8mar.out
+#SBATCH --error=metontiime_18mar.err
+#SBATCH --output=metontiime_18mar.out
 
 module load bioinfo-tools Nextflow 
 
@@ -50,7 +49,7 @@ cat metontiime2.conf
 echo " "
 # work_dir="${PWD}/work_local_singularity"
 # work_dir="/crex/proj/staff/richel/ticket_287014_output/work_local_singularity"
-workDir="/crex/proj/naiss2023-22-866/MetONTIIME/trimmed_and_filtered_Q15_qz"
+work_dir="/crex/proj/naiss2023-22-866/MetONTIIME/trimmed_and_filtered_Q15_qz"
 echo "work_dir: ${work_dir}"
 
 # No, these are already there :-)
