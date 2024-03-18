@@ -70,14 +70,13 @@ echo "results_dir: ${results_dir}"
 db_sequence_fasta_filename="/crex/proj/naiss2023-22-866/Illumina_Qiime2_and_BLAST/sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta"
 echo "db_sequence_fasta_filename: ${db_sequence_fasta_filename}"
 
-# Nope, not needed
-# # sample_metadata_tsv_filename="${work_dir}/created_sample_metadata.tsv"
 # # From Simone Maestri:
 # # > the sample metadata file is optional, 
 # # > you don't need to create one, you can specify the path to an empty file, 
 # # > which will be created upon running
-# # sample_metadata_tsv_filename="${PWD}/example_sample_metadata.tsv"
-# echo "sample_metadata_tsv_filename: ${sample_metadata_tsv_filename}"
+# From Richel: you do need to specify the path-to_be
+sample_metadata_tsv_filename="${PWD}/example_sample_metadata.tsv"
+echo "sample_metadata_tsv_filename: ${sample_metadata_tsv_filename}"
 
 #taxonomy_tsv_filename="${PWD}/example_taxonomy.tsv"
 taxonomy_tsv_filename="/crex/proj/naiss2023-22-866/MetONTIIME/noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv"
