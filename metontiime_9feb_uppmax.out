@@ -1,0 +1,191 @@
+N E X T F L O W  ~  version 23.10.1
+Launching `metontiime2_9feb.nf` [peaceful_archimedes] DSL2 - revision: b4ab54fae0
+[-        ] process > importDb    -
+[-        ] process > importFastq -
+[-        ] process > derepSeq    -
+
+[-        ] process > importDb       -
+[-        ] process > importFastq    -
+[-        ] process > derepSeq       -
+[-        ] process > assignTaxonomy -
+
+[-        ] process > importDb       -
+[-        ] process > importFastq    -
+[-        ] process > derepSeq       -
+[-        ] process > assignTaxonomy -
+[-        ] process > filterTaxa     -
+
+[-        ] process > importDb              -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+
+[-        ] process > importDb              -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+[-        ] process > importDb              -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+WARN: There's no process matching config selector: concatenateFastq
+WARN: There's no process matching config selector: filterFastq -- Did you mean: filterTaxa?
+WARN: There's no process matching config selector: downsampleFastq
+
+[-        ] process > importDb              -
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+WARN: There's no process matching config selector: concatenateFastq
+WARN: There's no process matching config selector: filterFastq -- Did you mean: filterTaxa?
+WARN: There's no process matching config selector: downsampleFastq
+WARN: Access to undefined parameter `sampleMetadata` -- Initialise it to a default value eg. `params.sampleMetadata = some_value`
+
+[-        ] process > importDb              [  0%] 0 of 1
+[-        ] process > importFastq           [  0%] 0 of 1
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+WARN: There's no process matching config selector: concatenateFastq
+WARN: There's no process matching config selector: filterFastq -- Did you mean: filterTaxa?
+WARN: There's no process matching config selector: downsampleFastq
+WARN: Access to undefined parameter `sampleMetadata` -- Initialise it to a default value eg. `params.sampleMetadata = some_value`
+
+executor >  slurm (2)
+[2e/2f8ece] process > importDb (1)          [  0%] 0 of 1
+[81/dd7797] process > importFastq           [  0%] 0 of 1
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+WARN: There's no process matching config selector: concatenateFastq
+WARN: There's no process matching config selector: filterFastq -- Did you mean: filterTaxa?
+WARN: There's no process matching config selector: downsampleFastq
+WARN: Access to undefined parameter `sampleMetadata` -- Initialise it to a default value eg. `params.sampleMetadata = some_value`
+
+executor >  slurm (2)
+[2e/2f8ece] process > importDb (1)          [  0%] 0 of 1
+[81/dd7797] process > importFastq           [  0%] 0 of 1
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+
+
+
+
+
+executor >  slurm (2)
+[2e/2f8ece] process > importDb (1)          [  0%] 0 of 1
+[81/dd7797] process > importFastq           [  0%] 0 of 1
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+ERROR ~ Error executing process > 'importDb (1)'
+
+Caused by:
+  Process `importDb (1)` terminated with an error exit status (140)
+
+Command executed:
+
+  mkdir -p /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb
+  
+  qiime tools import 		--type 'FeatureData[Sequence]' 		--input-path sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_sequences.qza
+  
+  qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_taxonomy.qza
+
+Command exit status:
+  140
+
+Command output:
+  (empty)
+
+Command error:
+  INFO:    Environment variable SINGULARITYENV_TMPDIR is set, but APPTAINERENV_TMPDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_NXF_TASK_WORKDIR is set, but APPTAINERENV_NXF_TASK_WORKDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_SNIC_TMP is set, but APPTAINERENV_SNIC_TMP is preferred
+  Matplotlib created a temporary config/cache directory at /scratch/44980260/matplotlib-btpge_sp because the default path (/home/ianm0001/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Work dir:
+  /crex/proj/naiss2023-22-866/MetONTIIME/work/2e/2f8ece19ef8a9a82aaddb5b576c687
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+
+ -- Check '.nextflow.log' file for details
+WARN: Killing running tasks (1)
+
+executor >  slurm (2)
+[2e/2f8ece] process > importDb (1)          [100%] 1 of 1, failed: 1 ✘
+[-        ] process > importFastq           -
+[-        ] process > derepSeq              -
+[-        ] process > assignTaxonomy        -
+[-        ] process > filterTaxa            -
+[-        ] process > taxonomyVisualization -
+[-        ] process > collapseTables        -
+[-        ] process > dataQC                -
+[-        ] process > diversityAnalyses     -
+ERROR ~ Error executing process > 'importDb (1)'
+
+Caused by:
+  Process `importDb (1)` terminated with an error exit status (140)
+
+Command executed:
+
+  mkdir -p /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb
+  
+  qiime tools import 		--type 'FeatureData[Sequence]' 		--input-path sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_sequences.qza
+  
+  qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_taxonomy.qza
+
+Command exit status:
+  140
+
+Command output:
+  (empty)
+
+Command error:
+  INFO:    Environment variable SINGULARITYENV_TMPDIR is set, but APPTAINERENV_TMPDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_NXF_TASK_WORKDIR is set, but APPTAINERENV_NXF_TASK_WORKDIR is preferred
+  INFO:    Environment variable SINGULARITYENV_SNIC_TMP is set, but APPTAINERENV_SNIC_TMP is preferred
+  Matplotlib created a temporary config/cache directory at /scratch/44980260/matplotlib-btpge_sp because the default path (/home/ianm0001/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Work dir:
+  /crex/proj/naiss2023-22-866/MetONTIIME/work/2e/2f8ece19ef8a9a82aaddb5b576c687
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+
+ -- Check '.nextflow.log' file for details
+
