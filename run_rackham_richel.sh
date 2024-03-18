@@ -41,6 +41,19 @@ sed -i 's/ 10.GB / 7.GB /' metontiime2.conf
 # Change the executor from pbspro to local
 sed -i "s/executor = 'pbspro'/executor = 'local'/" metontiime2.conf
 
+# Clusteringidentity should be 0.97
+sed -i "s/clusteringIdentity=1/clusteringIdentity=0.97/" metontiime2.conf
+
+# filterFastq should be false
+sed -i "s/filterFastq = true/filterFastq = false/" metontiime2.conf
+
+# downsampleFastq should be false
+sed -i "s/downsampleFastq = true/downsampleFastq = false/" metontiime2.conf
+
+echo "Script generated and used:"
+cat metontiime2.conf
+
+echo " "
 # work_dir="${PWD}/work_local_singularity"
 work_dir="/crex/proj/staff/richel/ticket_287014_output/work_local_singularity"
 echo "work_dir: ${work_dir}"

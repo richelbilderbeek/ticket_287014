@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH -J metontiime_8mar
+#SBATCH -J metontiime_18mar_2
 #SBATCH -A naiss2023-22-866
 #SBATCH -t 9-00:00:00
 #SBATCH -p core
 #SBATCH -n 4
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=ida.nordstrom@slu.se
-#SBATCH --error=metontiime_18mar.err
-#SBATCH --output=metontiime_18mar.out
+#SBATCH --error=metontiime_18mar_2.err
+#SBATCH --output=metontiime_18mar_2.out
 
 module load bioinfo-tools Nextflow 
 
@@ -43,6 +43,15 @@ sed -i 's/ 10.GB / 7.GB /' metontiime2.conf
 # Change the executor from pbspro to local
 sed -i "s/executor = 'pbspro'/executor = 'local'/" metontiime2.conf
 
+# Clusteringidentity should be 0.97
+sed -i "s/clusteringIdentity=1/clusteringIdentity=0.97/" metontiime2.conf
+
+# filterFastq should be false
+sed -i "s/filterFastq = true/filterFastq = false/" metontiime2.conf
+
+# downsampleFastq should be false
+sed -i "s/downsampleFastq = true/downsampleFastq = false/" metontiime2.conf
+
 echo "Script generated and used:"
 cat metontiime2.conf
 
@@ -62,8 +71,6 @@ echo "work_dir: ${work_dir}"
 # results_dir="/crex/proj/staff/richel/ticket_287014_output/results_local_singularity"
 results_dir="/crex/proj/naiss2023-22-866/MetONTIIME/Output"
 echo "results_dir: ${results_dir}"
-
-
 
 # db_sequence_fasta_filename="${PWD}/example_db_sequence.fasta"
 # db_sequence_fasta_filename="/crex/proj/naiss2023-22-866/MetONTIIME/sh_refs_qiime_ver9_dynamic_all_25.07.2023.fasta"
