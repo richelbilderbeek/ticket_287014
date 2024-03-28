@@ -54,8 +54,8 @@ config_filename="${PWD}/metontiime2.conf"
 # Resume and run locally
 #
 # The only new thing is the '-resume' flag
-nextflow -resume \
-  -c "${config_filename}" run metontiime2.nf \
+nextflow -c "${config_filename}" \
+  run -resume metontiime2.nf \
   --workDir="${work_dir}" \
   --resultsDir="${results_dir}" \
   --dbSequencesFasta="${db_sequence_fasta_filename}" \
