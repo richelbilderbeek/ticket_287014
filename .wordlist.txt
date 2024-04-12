@@ -48,6 +48,15 @@ Matplotlib
 barchart
 scatterplot
 Richel
-
-
+conda
+conf
+Hmmm
+metontiime
+numpi
+Numpi
+pbspro
+QIIME
+rackham
+richel
+venv
 
