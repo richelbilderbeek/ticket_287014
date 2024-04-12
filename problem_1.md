@@ -32,7 +32,7 @@ Changes it makes:
 
 The version of Python is changed, not by me, to something that is too old.
 
-In a script [run_rackham.sh](run_rackham.sh),
+In a script [run_rackham_richel.sh](run_rackham_richel.sh),
 I load some modules, activate an environment and load Python 3.12.1.
 Note the Python version.
 
@@ -393,7 +393,7 @@ Tip: you can replicate the issue by changing to the process work dir and enterin
 
 # Other notes
 
-The [nextflow_7march.log](nextflow_7march.log) gives this error:
+The `nextflow_7march.log` gives this error:
 
 ```
   qiime tools import 		--type 'FeatureData[Taxonomy]' 		--input-path noheader_taxonomy_qiime_ver9_dynamic_alleukaryotes_25.07.2023.tsv 		--input-format HeaderlessTSVTaxonomyFormat 		--output-path /crex/proj/naiss2023-22-866/MetONTIIME/Output/importDb/db_taxonomy.qza
